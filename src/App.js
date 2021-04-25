@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Title from "./components/Title"
 import Flex from "./components/Flex"
 import Console from "./components/Console"
+import Button from "./components/Button"
 
 const AppWrapper = styled.div`
 width: 100%;
@@ -21,9 +22,12 @@ function App() {
               Console CMD 
             </Title>
       </Flex>
-      <Console color="green">
-
-      </Console>
+      <Flex flexDirection="column">
+              <Console color="green"/>
+              <Button alignSelf="flex-end"  color="green">
+                Submit
+              </Button>
+      </Flex>
     </AppWrapper>
     
   );

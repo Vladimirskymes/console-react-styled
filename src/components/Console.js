@@ -12,7 +12,6 @@ resize: none;
 &:focus {
     outline: none;
 }
-
 `
 
 function Console(props) {
