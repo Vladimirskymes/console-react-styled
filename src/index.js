@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import styled, {createGlobalStyle} from "styled-components"
+import styled, {createGlobalStyle, ThemeProvider} from "styled-components"
 
 const Global = createGlobalStyle`
 *{
@@ -12,10 +12,25 @@ const Global = createGlobalStyle`
   font-family: consolas;
 }
 `
+
+const theme = {
+  colors: {
+    primary: "green",
+    secondary: "red"
+
+  },
+  media: {
+    phone: "(max-width: 450px)",
+    tablet: "(max-width: 768px) and (min-width: 450px)"
+  }
+}
+
+
+
 ReactDOM.render(
-  <>
-  <Global/>
-  <App />
-  </>
+  <ThemeProvider theme={theme}>
+        <Global/> 
+        <App />
+  </ThemeProvider>
   ,document.getElementById('root')
 );

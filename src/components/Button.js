@@ -28,16 +28,16 @@ align-self: ${(props) => props.alignSelf || "stretch"};
 ${
     props=>props.primary && css
     `
-    color: ${props => props.color || "white"};
-    background: ${props => props.background || "white"};
+    color: ${(props) => props.color || props.theme.colors.primary};
+    background: ${props => props.background || props.theme.colors.primary};
 
     `
 }
 ${
     props=>props.outlined && css
     `
-    border: 1px solid ${props => props.color || "white"};
-    color: ${props => props.color || "white"};
+    border: 1px solid ${props => props.color || props.theme.colors.primary};
+    color: ${(props) => props.color || props.theme.colors.primary};
     background: transparent;
 
     `

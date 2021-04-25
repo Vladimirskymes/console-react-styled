@@ -18,13 +18,13 @@ function App() {
   return (
     <AppWrapper>
       <Flex justifyContent = "center" >
-            <Title color={"green"}>
+            <Title>
               Console CMD 
             </Title>
       </Flex>
-      <Flex flexDirection="column">
-              <Console color="green"/>
-              <Button alignSelf="flex-end"  color="green">
+      <Flex flexDirection="column" margin={"10px 0"}>
+              <Console/>
+              <Button alignSelf="flex-end" >
                 Submit
               </Button>
       </Flex>
