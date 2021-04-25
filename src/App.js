@@ -3,7 +3,7 @@ import './App.css';
 import styled from "styled-components"
 import Title from "./components/Title"
 import Flex from "./components/Flex"
-
+import Console from "./components/Console"
 
 const AppWrapper = styled.div`
 width: 100%;
@@ -21,6 +21,9 @@ function App() {
               Console CMD 
             </Title>
       </Flex>
+      <Console color="green">
+
+      </Console>
     </AppWrapper>
     
   );
